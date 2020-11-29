@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:padding="16dp">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <AutoCompleteTextView
+            android:id="@+id/edit_itemname"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:ems="10"
+            android:hint="Item Name"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_itemquan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:helperTextEnabled="true"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/edit_itemquan"
+        android:layout_marginTop="100dp"
+        android:hint="Weight in">
+        <AutoCompleteTextView
+            android:id="@+id/edit_itemweight"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--    <EditText-->
+<!--        android:id="@+id/edit_itemquan"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50sp"-->
+<!--        android:layout_marginTop="92dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Quantity" />-->
+
+
+</RelativeLayout>

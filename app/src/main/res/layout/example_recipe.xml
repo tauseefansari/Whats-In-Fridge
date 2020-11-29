@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="15dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/recCard2"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/text_view_creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creator Name"
+        android:fontFamily="@font/bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/image_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_share"/>
+
+    <TextView
+        android:id="@+id/text_view_health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health: "
+        android:textSize="16sp"
+        android:textColor="@color/addBtn"
+        android:fontFamily="@font/medium"
+         />
+
+    <TextView
+        android:id="@+id/text_view_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Like: "
+        android:textSize="16sp"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/txtColor"
+        />
+
+
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

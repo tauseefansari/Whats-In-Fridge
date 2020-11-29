@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@color/black">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="587dp"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="100dp"
+        android:layoutAnimation="@anim/layout_animation_fade_scale" />
+
+    <Button
+        android:id="@+id/seeRecipes"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/addbtn"
+        android:fontFamily="@font/bold"
+        android:text="Recipes"
+        android:textAllCaps="false"
+        android:textColor="@color/txtColor"
+
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="361dp"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/bookmark"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button_dialog"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="21dp"
+        android:layout_toEndOf="@+id/seeRecipes"
+        android:background="@drawable/button"
+        android:fontFamily="@font/bold"
+        android:paddingStart="18dp"
+        android:text="Add Item"
+        android:textAllCaps="false"
+        android:textColor="@color/txtColor"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="224dp"
+        android:fontFamily="@font/medium"
+        android:text="List of items"
+        android:textColor="@color/txtColor"
+        android:textSize="20sp" />
+
+</RelativeLayout>
