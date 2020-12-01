@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,8 +22,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class ExampleDialog extends AppCompatDialogFragment {
     private AutoCompleteTextView editTextItemName;
-    private AutoCompleteTextView editTextItemWeight;
     private TextInputLayout editTextItemQuan;
+    private Spinner editTextItemWeight;
     private ExampleDialogListner listner;
     @NonNull
     @Override
@@ -43,11 +44,7 @@ public class ExampleDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String itemName = editTextItemName.getText().toString();
-                        String itemQuan = editTextItemQuan.getEditText().getText().toString()+" "+editTextItemWeight.getText().toString();
-                        if(editTextItemWeight.getText().toString().matches(""))
-                        {
-                            itemQuan = editTextItemQuan.getEditText().getText().toString()+" kg";
-                        }
+                        String itemQuan = editTextItemQuan.getEditText().getText().toString()+" "+editTextItemWeight.getSelectedItem().toString();
                         listner.applyText(itemName,itemQuan);
                     }
                 });
@@ -58,7 +55,7 @@ public class ExampleDialog extends AppCompatDialogFragment {
 
         editTextItemWeight = view.findViewById(R.id.edit_itemweight);
         String[] weights = {"Kg","Ltr","gm","Pcs"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, weights);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.dropdown_item, weights);
         editTextItemWeight.setAdapter(adapter);
 
         editTextItemQuan = view.findViewById(R.id.edit_itemquan);

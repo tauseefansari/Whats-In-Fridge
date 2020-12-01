@@ -34,19 +34,16 @@
             android:inputType="numberDecimal"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <Spinner
+        android:id="@+id/edit_itemweight"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60sp"
+        android:ems="10"
         android:layout_toRightOf="@id/edit_itemquan"
         android:layout_marginTop="100dp"
-        android:hint="Weight in">
-        <AutoCompleteTextView
-            android:id="@+id/edit_itemweight"
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:ems="10"
-            android:inputType="textPersonName"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginLeft="10dp"
+        android:hint="Weight in"/>
+
     <!--    <EditText-->
 <!--        android:id="@+id/edit_itemquan"-->
 <!--        android:layout_width="match_parent"-->
@@ -54,6 +51,5 @@
 <!--        android:layout_marginTop="92dp"-->
 <!--        android:ems="10"-->
 <!--        android:hint="Quantity" />-->
-
 
 </RelativeLayout>
